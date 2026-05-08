@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || 'mysql.railway.internal',
+    baseURL: import.meta.env.VITE_API_URL || '${{ MySQL.MYSQL_URL }}',
 });
 
 api.interceptors.request.use((config) => {
